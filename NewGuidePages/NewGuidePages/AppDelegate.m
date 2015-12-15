@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "JXNavController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,9 +16,71 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    [self chooseViewController];
     return YES;
 }
+
+//选择应该显示的控制器
+- (UIViewController *)chooseViewController{
+
+
+    //判断沙盒和当前版本号是否一致
+    if ([[self loadSaveAppVersion] isEqualToString:[self loadAppVersion]]) {
+        //一致,显示导航控制器
+        JXNavController *nav = [[JXNavController alloc]init];
+        NSLog(@"nav");
+        return nav;
+    }else{
+        //不一致,显示引导页
+        UIViewController *vc = [[UIViewController alloc]init];
+        vc.view.backgroundColor = [UIColor orangeColor];
+        NSLog(@"VC");
+        return vc;
+
+    }
+
+
+
+}
+
+
+
+
+//获取沙盒中保存的版本
+- (NSString *)loadSaveAppVersion{
+
+    //获取ud对象
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    return [ud objectForKey:@"appVersion"];
+
+
+}
+
+//将当前版本号保存到沙盒中
+- (void)saveAppVersion{
+   //获取info.plist
+    NSDictionary *dict = [NSBundle mainBundle].infoDictionary;
+    //获取用户对象
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:dict[@"CFBundleShortVersionString"] forKey:@"appVersion"];
+
+
+
+}
+
+//获取当前版本号
+- (NSString *)loadAppVersion{
+
+    //获取info.plist
+    NSDictionary *dict =[NSBundle mainBundle].infoDictionary;
+    NSLog(@"%@",dict[@"CFBundleShortVersionString"]);
+    return dict[@"CFBundleShortVersionString"];
+
+
+
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

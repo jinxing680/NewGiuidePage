@@ -15,6 +15,7 @@
 		2A9A1BE71C1FDECD00F283FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A1BE51C1FDECD00F283FC /* LaunchScreen.storyboard */; };
 		2A9A1BF21C1FDECD00F283FC /* NewGuidePagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1BF11C1FDECD00F283FC /* NewGuidePagesTests.m */; };
 		2A9A1BFD1C1FDECD00F283FC /* NewGuidePagesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1BFC1C1FDECD00F283FC /* NewGuidePagesUITests.m */; };
+		2A9A1C0C1C1FED1100F283FC /* JXNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1C0B1C1FED1100F283FC /* JXNavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		2A9A1BF81C1FDECD00F283FC /* NewGuidePagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewGuidePagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9A1BFC1C1FDECD00F283FC /* NewGuidePagesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewGuidePagesUITests.m; sourceTree = "<group>"; };
 		2A9A1BFE1C1FDECD00F283FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A9A1C0A1C1FED1100F283FC /* JXNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXNavController.h; sourceTree = "<group>"; };
+		2A9A1C0B1C1FED1100F283FC /* JXNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXNavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				2A9A1BDB1C1FDECD00F283FC /* AppDelegate.m */,
 				2A9A1BDD1C1FDECD00F283FC /* ViewController.h */,
 				2A9A1BDE1C1FDECD00F283FC /* ViewController.m */,
+				2A9A1C0A1C1FED1100F283FC /* JXNavController.h */,
+				2A9A1C0B1C1FED1100F283FC /* JXNavController.m */,
 				2A9A1BE01C1FDECD00F283FC /* Main.storyboard */,
 				2A9A1BE31C1FDECD00F283FC /* Assets.xcassets */,
 				2A9A1BE51C1FDECD00F283FC /* LaunchScreen.storyboard */,
@@ -202,6 +207,7 @@
 		2A9A1BCC1C1FDECC00F283FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JX;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = cn.bjx680;
 				TargetAttributes = {
@@ -273,6 +279,7 @@
 				2A9A1BDF1C1FDECD00F283FC /* ViewController.m in Sources */,
 				2A9A1BDC1C1FDECD00F283FC /* AppDelegate.m in Sources */,
 				2A9A1BD91C1FDECD00F283FC /* main.m in Sources */,
+				2A9A1C0C1C1FED1100F283FC /* JXNavController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
