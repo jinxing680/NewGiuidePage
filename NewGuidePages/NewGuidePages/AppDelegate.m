@@ -36,15 +36,14 @@
     //判断沙盒和当前版本号是否一致
     if ([[self loadSaveAppVersion] isEqualToString:[self loadAppVersion]]) {
         //一致,显示导航控制器
-//        JXTabBarController *nav = [[JXTabBarController alloc]init];
-        JXGuideController *guide = [[JXGuideController alloc]init];
-        NSLog(@"nav");
-        return guide;
+        JXTabBarController *nav = [[JXTabBarController alloc]init];
+//        NSLog(@"nav");
+        return nav;
     }else{
         //不一致,显示引导页
         JXGuideController *guide = [[JXGuideController alloc]init];
 
-        NSLog(@"VC");
+//        NSLog(@"VC");
         return guide;
 
     }
