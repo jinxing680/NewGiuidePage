@@ -1,31 +1,41 @@
 //
-//  JXNavController.m
+//  JXTabBarController.m
 //  NewGuidePages
 //
 //  Created by 白金星 on 15/12/15.
 //  Copyright © 2015年 cn.bjx680. All rights reserved.
 //
 
-#import "JXNavController.h"
+#import "JXTabBarController.h"
 
-@interface JXNavController ()
+@interface JXTabBarController ()
 
 @end
 
-@implementation JXNavController
+@implementation JXTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    UIViewController *home = [self loadViewControllerWithSBName:@"Main"];
+    
 
-    self.tabBarItem.title = @"主页";
-    self.tabBarItem.image = [UIImage imageNamed:@"tabbar_home"];
+    self.viewControllers = @[home];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIViewController*)loadViewControllerWithSBName:(NSString*)name
+{
+    // 获取sb对象
+    UIStoryboard* sb = [UIStoryboard storyboardWithName:name bundle:nil];
+
+    // 获取箭头所指向的控制器
+    return sb.instantiateInitialViewController;
 }
 
 /*

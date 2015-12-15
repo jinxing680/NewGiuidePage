@@ -17,14 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_feature_3" translatesAutoresizingMaskIntoConstraints="NO" id="ybM-V2-SYb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9" translatesAutoresizingMaskIntoConstraints="NO" id="ybM-V2-SYb">
                                 <rect key="frame" x="180" y="108" width="240" height="178"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="QKc-lu-DWF"/>
                                     <constraint firstAttribute="height" constant="178" id="fWr-yl-lCm"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_feature_4" translatesAutoresizingMaskIntoConstraints="NO" id="KIx-Hp-xnX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="KIx-Hp-xnX">
                                 <rect key="frame" x="180" y="327" width="240" height="178"/>
                             </imageView>
                         </subviews>
@@ -64,7 +64,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="new_feature_3" width="320" height="568"/>
-        <image name="new_feature_4" width="320" height="568"/>
+        <image name="10" width="2560" height="1600"/>
+        <image name="9" width="2560" height="1600"/>
     </resources>
 </document>

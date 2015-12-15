@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "JXNavController.h"
+#import "JXGuideController.h"
+#import "JXTabBarController.h"
+#define kScreenSize [UIScreen mainScreen].bounds
 @interface AppDelegate ()
 
 @end
@@ -17,7 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [self chooseViewController];
+    self.window = [[UIWindow alloc]initWithFrame:kScreenSize];
+
+    self.window.rootViewController = [self chooseViewController];
+    [self.window makeKeyAndVisible];
+
+    [self saveAppVersion];
     return YES;
 }
 
@@ -28,15 +36,16 @@
     //判断沙盒和当前版本号是否一致
     if ([[self loadSaveAppVersion] isEqualToString:[self loadAppVersion]]) {
         //一致,显示导航控制器
-        JXNavController *nav = [[JXNavController alloc]init];
+//        JXTabBarController *nav = [[JXTabBarController alloc]init];
+        JXGuideController *guide = [[JXGuideController alloc]init];
         NSLog(@"nav");
-        return nav;
+        return guide;
     }else{
         //不一致,显示引导页
-        UIViewController *vc = [[UIViewController alloc]init];
-        vc.view.backgroundColor = [UIColor orangeColor];
+        JXGuideController *guide = [[JXGuideController alloc]init];
+
         NSLog(@"VC");
-        return vc;
+        return guide;
 
     }
 

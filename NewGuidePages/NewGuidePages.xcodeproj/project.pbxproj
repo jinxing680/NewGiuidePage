@@ -16,6 +16,10 @@
 		2A9A1BF21C1FDECD00F283FC /* NewGuidePagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1BF11C1FDECD00F283FC /* NewGuidePagesTests.m */; };
 		2A9A1BFD1C1FDECD00F283FC /* NewGuidePagesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1BFC1C1FDECD00F283FC /* NewGuidePagesUITests.m */; };
 		2A9A1C0C1C1FED1100F283FC /* JXNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1C0B1C1FED1100F283FC /* JXNavController.m */; };
+		2A9A1C131C1FF73700F283FC /* JXGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1C121C1FF73700F283FC /* JXGuideController.m */; };
+		2A9A1C161C1FF8D100F283FC /* JXCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1C151C1FF8D100F283FC /* JXCollectionViewCell.m */; };
+		2A9A1C1B1C20003C00F283FC /* JXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1C1A1C20003C00F283FC /* JXTabBarController.m */; };
+		2A9A1C1F1C2004FA00F283FC /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A1C1E1C2004FA00F283FC /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,14 @@
 		2A9A1BFE1C1FDECD00F283FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A9A1C0A1C1FED1100F283FC /* JXNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXNavController.h; sourceTree = "<group>"; };
 		2A9A1C0B1C1FED1100F283FC /* JXNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXNavController.m; sourceTree = "<group>"; };
+		2A9A1C111C1FF73700F283FC /* JXGuideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXGuideController.h; sourceTree = "<group>"; };
+		2A9A1C121C1FF73700F283FC /* JXGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXGuideController.m; sourceTree = "<group>"; };
+		2A9A1C141C1FF8D100F283FC /* JXCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCollectionViewCell.h; sourceTree = "<group>"; };
+		2A9A1C151C1FF8D100F283FC /* JXCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCollectionViewCell.m; sourceTree = "<group>"; };
+		2A9A1C191C20003C00F283FC /* JXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTabBarController.h; sourceTree = "<group>"; };
+		2A9A1C1A1C20003C00F283FC /* JXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTabBarController.m; sourceTree = "<group>"; };
+		2A9A1C1D1C2004FA00F283FC /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		2A9A1C1E1C2004FA00F283FC /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +116,16 @@
 		2A9A1BD61C1FDECD00F283FC /* NewGuidePages */ = {
 			isa = PBXGroup;
 			children = (
+				2A9A1C1C1C2004E900F283FC /* Comman */,
+				2A9A1C0D1C1FF6CA00F283FC /* Guide */,
 				2A9A1BDA1C1FDECD00F283FC /* AppDelegate.h */,
 				2A9A1BDB1C1FDECD00F283FC /* AppDelegate.m */,
 				2A9A1BDD1C1FDECD00F283FC /* ViewController.h */,
 				2A9A1BDE1C1FDECD00F283FC /* ViewController.m */,
 				2A9A1C0A1C1FED1100F283FC /* JXNavController.h */,
 				2A9A1C0B1C1FED1100F283FC /* JXNavController.m */,
+				2A9A1C191C20003C00F283FC /* JXTabBarController.h */,
+				2A9A1C1A1C20003C00F283FC /* JXTabBarController.m */,
 				2A9A1BE01C1FDECD00F283FC /* Main.storyboard */,
 				2A9A1BE31C1FDECD00F283FC /* Assets.xcassets */,
 				2A9A1BE51C1FDECD00F283FC /* LaunchScreen.storyboard */,
@@ -143,6 +159,50 @@
 				2A9A1BFE1C1FDECD00F283FC /* Info.plist */,
 			);
 			path = NewGuidePagesUITests;
+			sourceTree = "<group>";
+		};
+		2A9A1C0D1C1FF6CA00F283FC /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A1C0E1C1FF6CA00F283FC /* Controller */,
+				2A9A1C0F1C1FF6CA00F283FC /* Model */,
+				2A9A1C101C1FF6CA00F283FC /* View */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		2A9A1C0E1C1FF6CA00F283FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A1C111C1FF73700F283FC /* JXGuideController.h */,
+				2A9A1C121C1FF73700F283FC /* JXGuideController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A9A1C0F1C1FF6CA00F283FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A9A1C101C1FF6CA00F283FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A1C141C1FF8D100F283FC /* JXCollectionViewCell.h */,
+				2A9A1C151C1FF8D100F283FC /* JXCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A9A1C1C1C2004E900F283FC /* Comman */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A1C1D1C2004FA00F283FC /* UIView+Frame.h */,
+				2A9A1C1E1C2004FA00F283FC /* UIView+Frame.m */,
+			);
+			path = Comman;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +336,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9A1C1F1C2004FA00F283FC /* UIView+Frame.m in Sources */,
 				2A9A1BDF1C1FDECD00F283FC /* ViewController.m in Sources */,
+				2A9A1C131C1FF73700F283FC /* JXGuideController.m in Sources */,
+				2A9A1C1B1C20003C00F283FC /* JXTabBarController.m in Sources */,
 				2A9A1BDC1C1FDECD00F283FC /* AppDelegate.m in Sources */,
 				2A9A1BD91C1FDECD00F283FC /* main.m in Sources */,
+				2A9A1C161C1FF8D100F283FC /* JXCollectionViewCell.m in Sources */,
 				2A9A1C0C1C1FED1100F283FC /* JXNavController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
